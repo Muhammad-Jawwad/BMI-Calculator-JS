@@ -1,0 +1,74 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    /* background: linear-gradient(to right, #c602fc,#fd04aa, #c602fc, #fd04aa);  */
+    background-color: black; 
+
+  }
+
+  .header {
+    background-color: rgb(255, 218, 8);
+    color: black;
+    margin-top: 0%;
+    font-size: 30px;
+    font-weight: 60;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0%;
+    padding-top: 0rem;
+    padding-left: 20px;
+    text-decoration: dashed;   
+    text-align: left;
+    letter-spacing: 0.8rem;
+    text-decoration:solid;
+  }
+  .bmi-cal-form {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(255, 218, 8);
+    min-height: 80vh;
+    /* grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px); */
+  }
+  .bmi-cal-form > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 0px ;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+  }
+  
+  .bmi-cal-form > button:hover {
+    background-color: rgba(74, 74, 74, 0.249);
+  }
+  .Result-display {
+    /* grid-column: 1 / -1; */
+    background-color: rgb(255, 218, 8);
+    color: black;
+    border-top-style: double;
+    border-color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 8px;
+    /* word-wrap: break-word;
+    word-break: break-all; */
+  }
+  .footer {
+    background-color: black;
+    margin-top: 0%;
+    color: rgb(255, 218, 8);
+    padding-bottom: 0%;
+    font-weight: 1000;
+    letter-spacing: .5rem;
+    padding: .8rem;
+    text-align: center;
+    }
+  
