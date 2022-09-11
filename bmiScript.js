@@ -13,10 +13,6 @@ class bmiCal{
         this.heightInches = 0; 
     }
 
-    chooseWeightUnit(unit){
-
-    }
-
     massInKg(mass,unit){
 
     }
@@ -31,6 +27,7 @@ class bmiCal{
     }
 
     displayBMI(){
+        this.displayResult.innerText = "Your BMI is:";
 
     }
     
@@ -50,5 +47,13 @@ const displayResult = document.querySelector(['display-result']);
 const bmical = new bmiCal(weight,weightUnit,heightFeets,heightInches);
 
 //Now telling buttons what to do on click
-
-
+calButton.addEventListener('click', (wg,opt1,opt2,opt3) => {
+    bmical.massInKg(wg.innerText,opt1.innerText);
+    bmical.heightInMeter(opt2.innerText,opt3.innerText);
+    bmical.computeBMI();
+    bmical.displayBMI();
+})
+clearButton.addEventListener('click', button => {
+    bmical.clear()
+    bmical.displayBMI()
+})
