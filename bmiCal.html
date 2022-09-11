@@ -13,68 +13,56 @@
     <header class="header">
         <h2>BMI Calculator</h2>
     </header>
-    <div class="cal-container">
-        <table class="input">
-            <tbody>
-                <tr>
-                    <td>
-                        <table id="calinputtable">
-                            <form name="calform"></form>
-                            <input type="hidden" name="ctype" id="ctype" value="metric"> 
-                                <tbody>
-                                    <tr>
-                                        <td width="80">Age</td>
-                                        <td width="540">
-                                            <input type="number" name="cage" id="cage" value="0" class="inhalf" onkeyup="iptfieldCheck(this, 'r', 'pn');">
-                                            <div class="inputErrMsg" id="cageifcErr" style="visibility: hidden;">required field</div>
-                                                ages: 2 - 120
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gender</td>
-                                        <td>
-                                            <label for="csex1" class="cbcontainer"><input type="radio" name="csex" id="csex1" value="m" checked=""><span class="rbmark"></span>Male</label>
-                                            <label for="csex2" class="cbcontainer"><input type="radio" name="csex" id="csex2" value="f"><span class="rbmark"></span>Female</label>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                        </table>
-                        <table width="300" id="metricheightweight" style="display: block;">
-                            <tbody>
-                                <tr id="metrichight">
-                                    <td width="60">Height</td>
-                                    <td width="240">
-                                        <input type="number" name="cheightmeter" id="cheightmeter" value="0" class="infull inuick" onkeyup="iptfieldCheck(this, 'r', 'pn');">
-                                        <span class="inuickspan"> cm</span>
-                                    </td>
-                                </tr>
-                                <tr id="metricweight">
-                                    <td>Weight</td>
-                                    <td>
-                                        <input type="number" name="ckg" id="ckg" value="0" class="infull inuick" onkeyup="iptfieldCheck(this, 'r', 'pn');">
-                                        <span class="inuickspan"> kg</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table width="260" class="button-table">
-                            <tbody>
-                                <td colspan="6" align="right">
-                                    <button data-calculate class="calculate">Calculate</button>
-                                    <button data-clear class="clear">Clear</button>            
-                                </td>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="output-screen">
-            <h4>Result:</h4>
-        </div>
+    <div class="bmi-cal-form">
+        <form name="bmi">
+            <label class="left-label" for="Weight">Weight:</label>
+            <div class="input">
+                <input data-weight class="weight-input" type="text" name="wg" size="15">
+                <select data-weight-unit class="weight-unit-input" name="opt1">
+                    <option selected="selected">Select</option>
+                    <option value-pond value="pounds">Pounds</option>
+                    <option value-kg value="kilograms">Kilograms</option>
+                </select>
+            </div>
+            <label class="left" for="Height">Height</label>
+            <div class="input">
+                <select data-height-feet class="height_input" name="opt2" onchange="conv(1)">
+                    <option selected="selected" value="">Select</option>
+                    <option value="1">1 feet</option>
+                    <option value="2">2 feet</option>
+                    <option value="3">3 feet</option>
+                    <option value="4">4 feet</option>
+                    <option value="5">5 feet</option>
+                    <option value="6">6 feet</option>
+                    <option value="7">7 feet</option>
+                </select>
+                <select data-height-inch class="height_unit_input" name="opt3" onchange="conv(2)">
+                    <option selected="selected" value="">Select</option>
+                    <option value="0">0 inch</option>
+                    <option value="1">1 inch</option>
+                    <option value="2">2 inch</option>
+                    <option value="3">3 inch</option>
+                    <option value="4">4 inch</option>
+                    <option value="5">5 inch</option>
+                    <option value="6">6 inch</option>
+                    <option value="7">7 inch</option>
+                    <option value="8">8 inch</option>
+                    <option value="9">9 inch</option>
+                    <option value="10">10 inch</option>
+                    <option value="11">11 inch</option>
+                </select>
+                <div class="cal-buttton">
+                    <button data-calculate class="bmi_button">Calculate</button>
+                    <button data-clear class="bmi_button">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>         
+    <div display-result class="Result-display">
+        <h4>Result:</h4>
     </div>
     <footer class="footer">
-
+        <p>Made by Muhammad Jawwad</p>
     </footer>
     
     <script src="bmiScript.js"></script>
