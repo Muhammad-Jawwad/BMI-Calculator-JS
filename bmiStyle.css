@@ -35,23 +35,24 @@
     background-color: black;
     margin-top: 8px;
     color: rgb(255, 218, 8);
+    font-family: 'Cardo', serif;
     letter-spacing: .4rem;
     padding: 0.6rem;
     text-align: center;
-    }
-    .btn-warning {
-        background-color: rgb(255, 218, 8) !important;
-    }
-    .btn-warning:hover {
-        background-color: black !important;
-        color: white !important;
-    }
-    .card {
-      background-color: black !important;
-      color: white;
-    }
-    .card-footer {
-        text-align: center;
-        font-weight: normal;
-        letter-spacing: 0.5px;
-    }
+  }
+  .btn-warning {
+  background-color: rgb(255, 218, 8) !important;
+  }
+  .btn-warning:hover {
+    background-color: black !important;
+    color: white !important;
+  }
+  .card {
+    background-color: black !important;
+    color: white;
+  }
+  .card-footer {
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
