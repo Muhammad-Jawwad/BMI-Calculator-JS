@@ -5,68 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bmiStyle.css" />
-    <!-- Including Bootstrap css -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <title>BMI Calculator</title>
 </head>
 <body>
     <header class="header">
         <h2>BMI CALCULATOR</h2>
     </header>
-    <div class="bmi-cal-form">
-        <form name="bmi">
-            <label class="left-label" for="Weight">Weight:</label>
-            <div class="input">
-                <input data-weight class="weight-input" type="text" name="wg" size="15">
-                <select data-weight-unit class="weight-unit-input" name="opt1">
-                    <option selected="selected">Select</option>
-                    <option value-pond value="pounds">Pounds</option>
-                    <option value-kg value="kilograms">Kilograms</option>
-                </select>
+    <div class="bmi-cal-form" >
+        <div class="card"><br>
+                <form class ="w-50 m-auto" onsubmit="return false">
+                    <div class="form">
+                        <label for="Weight">Weight:</label>
+                        <input id="weight" name="" placeholder="Weight in kg" required type="number" class="form-control" >
+                    </div>
+                    <br>
+                    <div class="form">
+                        <label for="Height">Height:</label>
+                        <input id="height" name="" placeholder="Height in ft (5'3'' = 5.3)" required type="number" class="form-control" >
+                    </div>
+                    <br>
+                    <div class="form">
+                        <label for="bmi-value">BMI Value:</label>
+                        <div id="bmi-value" name="" type="number" class="form-control" ></div>
+                    </div>
+                    <br>
+                    <div>
+                        <button cal-button type="submit" class="btn btn-success" onclick="getBMI()">Calculate</button>
+                        <button clear-button type="clear" class="btn btn-success" onclick="clearData()">Clear</button>
+                    </div>
+                    <br>
+                    <br>
+                </form>
             </div>
-            <label class="left" for="Height">Height</label>
-            <div class="input">
-                <select data-height-feet class="height_input" name="opt2" onchange="conv(1)">
-                    <option selected="selected" value="">Select</option>
-                    <option value="1">1 feet</option>
-                    <option value="2">2 feet</option>
-                    <option value="3">3 feet</option>
-                    <option value="4">4 feet</option>
-                    <option value="5">5 feet</option>
-                    <option value="6">6 feet</option>
-                    <option value="7">7 feet</option>
-                </select>
-                <select data-height-inch class="height_unit_input" name="opt3" onchange="conv(2)">
-                    <option selected="selected" value="">Select</option>
-                    <option value="0">0 inch</option>
-                    <option value="1">1 inch</option>
-                    <option value="2">2 inch</option>
-                    <option value="3">3 inch</option>
-                    <option value="4">4 inch</option>
-                    <option value="5">5 inch</option>
-                    <option value="6">6 inch</option>
-                    <option value="7">7 inch</option>
-                    <option value="8">8 inch</option>
-                    <option value="9">9 inch</option>
-                    <option value="10">10 inch</option>
-                    <option value="11">11 inch</option>
-                </select>
-                <div class="cal-buttton">
-                    <button data-calculate>Calculate</button>
-                    <button data-clear>Clear</button>
-                </div>
+            <div class="card-footer">
+                A healthy BMI ranges between 19 and 25.
             </div>
-        </form>
-    </div>         
-    <div display-result class="Result-display">
-        <h1>Result:</h1>
+        </div>
     </div>
     <footer class="footer">
         <p>Made by Muhammad Jawwad</p>
     </footer>
-    
     <script src="bmiScript.js"></script>
-    <!-- Including Bootstrap script -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>  -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.main.js"></script>
 </body>
 </html>
