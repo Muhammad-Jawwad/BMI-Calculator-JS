@@ -27,7 +27,7 @@
   }
   .bmi-cal-form {
     display: grid;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: center;
     background-color: rgb(255, 218, 8);
     min-height: 80vh;
@@ -70,4 +70,10 @@
     padding: .8rem;
     text-align: center;
     }
-  
+    .btn-warning {
+        background-color: rgb(255, 218, 8) !important;
+    }
+    .btn-warning:hover {
+        background-color: black !important;
+        color: white !important;
+    }
