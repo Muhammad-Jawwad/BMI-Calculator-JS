@@ -6,6 +6,7 @@ function getBMI(){
     heightInput = heightInput * 0.025;
 
     let bmiValue = weightInput/Math.pow(heightInput,2);
+    if (isNaN(bmiValue)) return
     bmiValue = Math.round(bmiValue);
 
     document.getElementById('bmi-value').innerText = bmiValue;
