@@ -11,10 +11,24 @@ function getBMI(){
 
     let bmiValue = weightInput/Math.pow(heightInput,2);
     if (isNaN(bmiValue)) return
-    bmiValue = Math.round(bmiValue);
+    if (isFinite(bmiValue)){ 
     
-
+    bmiValue = Math.round(bmiValue);
     document.getElementById('bmi-value').innerText = bmiValue;
+    if(bmiValue<18.5){
+        statusBMI.innerText = "Underweight";
+    }else if(bmiValue>=18.5 && bmiValue<=24.9){
+        statusBMI.innerText = "Normal Weight";
+    }else if(bmiValue>=25 && bmiValue<29.9){
+        statusBMI.innerText = "Pre-obesity";
+    }else if(bmiValue>=30 && bmiValue<34.9){
+        statusBMI.innerText = "Obesity Class I";
+    }else if(bmiValue>=35 && bmiValue<39.9){
+        statusBMI.innerText = "Obesity Class II";
+    }else if(bmiValue>=40){
+        statusBMI.innerText = "Obesity Class III";
+    }
+}else return
 }
 function clearData(){
     console.log("All data clear");
