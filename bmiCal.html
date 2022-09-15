@@ -17,12 +17,13 @@
                 <form class ="w-50 m-auto" onsubmit="return false">
                     <div class="form">
                         <label for="Weight">Weight:</label>
-                        <input id="weight" name="" placeholder="Weight in kg" required type="number" step="1" class="form-control" >
+                        <input id="weight" name="" placeholder="Weight in Kg (Above 10)" required type="number" step="1" class="form-control" >
                     </div>
                     <br>
                     <div class="form">
                         <label for="Height">Height:</label>
-                        <input id="height" name="" placeholder="Height in ft (5'3'' = 5.3)" required type="number" step="0.1" class="form-control" >
+                        <input id="height-ft" name="" placeholder="Feets of height (1-7)" required type="number" min="1" max="7" step="1" class="form-control" >
+                        <input id="height-inch" name="" placeholder="Inches of height (0-11)" required type="number" min="0" max="11" class="form-control" >
                     </div>
                     <br>
                     <div class="form">
@@ -44,6 +45,40 @@
             </div>
             <div class="card-footer">
                 _ A healthy BMI ranges between 19 and 25 _
+            </div>
+            <br>
+            <div class="instructions">
+                <h1>Instructions:</h1>
+                <p>
+                    Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from mass in kilograms and height in metres.
+                    <h3> Basic Categories:</h3>
+                    <ul>
+                        <li>
+                            Underweight (Severe thinness) ⇢ The people with a BMI below 16.0 are underweight; severely lean if below 16
+                        </li>
+                        <li>
+                            Underweight (Moderate thinness) ⇢ The people with a BMI in between 16.0 – 16.9 are moderately underweight.
+                        </li>
+                        <li>
+                            Underweight (Mild thinness) ⇢ The people with a BMI in between 17.0 – 18.4 are mildly underweight.
+                        </li>
+                        <li>
+                            Normal range ⇢ The people with a BMI in between 18.5 – 24.9 are normal; they're in the healthy weight range.
+                        </li>
+                        <li>
+                            Overweight (Pre-obese) ⇢ The people with a BMI in between 25.0 – 29.9 are 25.0 – 29.9 are overweight; they've  Waist Circumference, and Associated Disease Risks
+                        <li>
+                            Obese (Class I) ⇢ The people with a BMI in between 30.0 – 34.9 are in the classification of Overweight and Obesity by BMI
+                        </li>
+                        <li>
+                            Obese (Class II) ⇢ The people with a BMI in between 35.0 – 39.9 are in Class 2 (moderate-risk) obesity.
+                        </li>
+                        <li>
+                            Obese (Class III) ⇢ The people with a BMI above 40 are in Class 3 morbid obesity.
+                        </li>
+                       
+                    </ul>
+                </p>
             </div>
         </div>
     </div>
