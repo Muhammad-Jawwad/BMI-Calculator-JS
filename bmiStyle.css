@@ -1,36 +1,43 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Cardo', serif;
-
   }
+
   body {
     padding: 0;
     margin: 0;
+    overflow: scroll;
+    overflow-x: hidden;
     background-color: black; 
-
   }
+
   .header {
     background-color: rgb(255, 218, 8);
     color: black;
     margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 100px !important;
-    font-weight: 6rem;
+    font-weight: 7rem;
     font-family: 'Cardo', serif;
     padding: 0%;
-    padding-top: 0.4rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     letter-spacing: 0.8rem;
   }
+
   .bmi-cal-form {
     display: grid;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
     /* justify-content: center; */
     align-content: center;
     background-color: rgb(255, 218, 8);
+    padding-top: 146px;
     min-height: 80vh;
     /* grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px); */
   }
+
   .footer {
     background-color: black;
     margin-top: 8px;
@@ -40,19 +47,30 @@
     padding: 0.6rem;
     text-align: center;
   }
+
   .btn-warning {
   background-color: rgb(255, 218, 8) !important;
   }
+
   .btn-warning:hover {
     background-color: black !important;
     color: white !important;
   }
+
   .card {
     background-color: black !important;
     color: white;
   }
+
   .card-footer {
     text-align: center;
     font-weight: normal;
     letter-spacing: 0.5px;
   }
+  
+.instructions {
+  color: black;
+  justify-content: left;
+  background-color: rgb(255, 218, 8) ;
+  padding: 30px;
+}
