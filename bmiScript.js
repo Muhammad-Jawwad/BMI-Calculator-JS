@@ -52,3 +52,4 @@ function clearData(){
     document.getElementById('bmi-value').innerText = '';
     statusBMI.innerText = '';
 }   
+
